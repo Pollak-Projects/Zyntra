@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -7,20 +7,20 @@ body {
 }
 
 header {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ff5c5c;
+    background-color:#db3f47;
     padding: 15px;
     color: white;
     position: relative;
 }
 
 .logo {
-    width: 40px;
-    height: 40px;
-    background-color: #1a1a3d;
-    border-radius: 50%;
+    max-width: 150px;
+    height: 80px;
 }
 
 .icons {
@@ -65,7 +65,7 @@ header {
 }
 
 .search-bar {
-    width: 80%;
+    width: 35%;
     padding: 10px;
     margin: 20px 0;
     border-radius: 5px;
@@ -80,6 +80,9 @@ header {
 }
 
 .category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 150px;
     height: 40px;
     background-color: #d3d3d3;
@@ -95,10 +98,12 @@ header {
 
 .review {
     background: white;
-    padding: 15px;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 200px;
+    width: 300px;
+    height: auto;
+
 }
 
 .user-info {
@@ -109,9 +114,9 @@ header {
 }
 
 .avatar {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    border-radius: 15%;
     display: inline-block;
 }
 
@@ -121,10 +126,12 @@ header {
 .brown { background-color: brown; }
 
 .image {
-    width: 100%;
-    height: 100px;
-    background-color: #ccc;
+    height: 250px;
+    background-color: #1f1f1f;
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .hamburger-menu {
@@ -177,3 +184,10 @@ header {
     text-align: center;
 }
 
+.rating{
+    margin-bottom: 20px;
+}
+
+.comment{
+    margin-bottom: 10px;
+}

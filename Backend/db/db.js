@@ -1,12 +1,10 @@
-// db.js
+const mysql = require('mysql');
 
-const mysql = require('mysql2');
 
-// MySQL kapcsolat beállítása
 const connection = mysql.createConnection({
     host: 'localhost',
-    user: 'root',    // vagy a saját adatbázis felhasználóneved
-    password: '',    // a saját adatbázis jelszavad
+    user: 'root',   
+    password: '',    
     database: 'zyntra'
 });
 

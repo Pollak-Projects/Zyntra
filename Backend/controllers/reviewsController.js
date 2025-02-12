@@ -1,27 +1,15 @@
-const db = require('../db');  
-
+// controllers/reviewController.js
+const db = require('../db/db');  // Hivatkozás az adatbázis kapcsolatra
 
 // Vélemények lekérése
 exports.getReviews = (req, res) => {
-    db.query('SELECT * FROM reviews ORDER BY created_at DESC', (err, results) => {
-        if (err) {
-            console.error('Hiba a vélemények lekérésekor:', err);
-            return res.status(500).send('Hiba történt');
-        }
-        res.json(results);
-    });
-};
+    const query = 'SELECT * FROM reviews';  // SQL lekérdezés a véleményekhez
 
-// Vélemény mentése
-exports.saveReview = (req, res) => {
-    const { username, avatar_color, content, image_url } = req.body;
-    const query = 'INSERT INTO reviews (username, avatar_color, content, image_url) VALUES (?, ?, ?, ?)';
-
-    db.query(query, [username, avatar_color, content, image_url], (err, result) => {
+    db.query(query, (err, results) => {
         if (err) {
-            console.error('Hiba a vélemény mentésekor:', err);
-            return res.status(500).send('Hiba történt');
+            console.error('Error fetching reviews:', err);
+            return res.status(500).json({ error: 'Error fetching reviews' });
         }
-        res.status(201).send('Vélemény sikeresen mentve');
+        res.json(results);  // A válasz JSON formátumban
     });
 };
